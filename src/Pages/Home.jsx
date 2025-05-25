@@ -3,7 +3,9 @@ import HeroImage from '../assets/hero-image.jpg';
 import Tilt from 'react-parallax-tilt';
 import KeyboardArrowDownTwoToneIcon from '@mui/icons-material/KeyboardArrowDownTwoTone';
 
-const Home = ({scrollToAbout}) => {
+const Home = ({ scrollToAbout }) => {
+  
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   return (
     <div className='home pt-4 pt-md-0 w-100 d-flex flex-column justify-content-center position-relative' style={{ paddingBottom:'7rem', minHeight: '100vh' }}>
@@ -33,9 +35,10 @@ const Home = ({scrollToAbout}) => {
                 </div>
               </div>
               <div className='w-100 d-flex justify-content-center justify-content-md-end align-items-center'>
-                <a style={{ cursor: 'pointer'}}
+                <a
+                  style={{ cursor: 'pointer' }}
                   className='btn download-cv'
-                  href="http://localhost:3000/download-resume"
+                  href={`${BASE_URL}download-resume`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
