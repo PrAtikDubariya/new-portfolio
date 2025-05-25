@@ -50,7 +50,7 @@ const Contact = () => {
     if (Object.keys(validationErrors).length === 0) {
       try {
         const response = await fetch(`${BASE_URL}/notify`, {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
