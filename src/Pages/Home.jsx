@@ -38,7 +38,7 @@ const Home = ({ scrollToAbout }) => {
                 <a
                   style={{ cursor: 'pointer' }}
                   className='btn download-cv'
-                  href={`${BASE_URL}download-resume`}
+                  href={`${BASE_URL}/download-resume`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
