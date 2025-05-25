@@ -565,6 +565,14 @@ body {
 .achievements .timeline .timeline-item {
   background-color: var(--skills-box-bg) !important;
   border: var(--skills-box-border) !important;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.achievements .timeline .timeline-item.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .achievements .timeline .timeline-item .timeline-content .timeline-title .sub {
