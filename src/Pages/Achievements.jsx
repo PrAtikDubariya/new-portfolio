@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../App.css";
 import CodeTwoToneIcon from '@mui/icons-material/CodeTwoTone';
+import { education, experience } from "../Components/Content";
 
 const Achievements = () => {
     const timelineRef = useRef(null);
@@ -38,7 +39,7 @@ const Achievements = () => {
                         <div className="h-100">
                             <h4 className="mb-4 fw-bold text-center mb-5">Education</h4>
                             <div className="timeline">
-                                {[...Array(3)].map((_, idx) => (
+                                {education.map((edu, idx) => (
                                     <div
                                         key={idx}
                                         className="timeline-item p-3 mb-5 shadow bg-white border position-relative"
@@ -48,29 +49,25 @@ const Achievements = () => {
                                             className="timeline-info position-absolute border rounded-pill shadow-sm"
                                             style={{ top: "-18px" }}
                                         >
-                                            <span>June 15, 2013 - 2016</span>
+                                            <span>{edu.date}</span>
                                         </div>
                                         <div className="timeline-content">
                                             <h5 className="timeline-title">
-                                                Master of Science in Computer Science{" "}
-                                                <span className="sub"> - first class</span>
+                                                {edu.title}{" "}
+                                                <span className="sub">{edu.sub}</span>
                                             </h5>
-                                            <p>
-                                                Elit exercitation consectetur fugiat sint pariatur aliqua ut est id sit eiusmod.
-                                                Cupidatat mollit quis do reprehenderit minim exercitation et. Tempor nisi ex duis
-                                                cillum exercitation.
-                                            </p>
+                                            <p>{edu.description}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 h-100">
                         <div className="h-100">
-                            <h4 className="mb-4 fw-bold text-center mb-5">Education</h4>
-                            <div className="timeline">
-                                {[...Array(3)].map((_, idx) => (
+                            <h4 className="mb-4 fw-bold text-center mb-5">Experience</h4>
+                            <div className="timeline h-100">
+                                {experience.map((ex, idx) => (
                                     <div
                                         key={idx}
                                         className="timeline-item p-3 mb-5 shadow bg-white border position-relative"
@@ -80,18 +77,14 @@ const Achievements = () => {
                                             className="timeline-info position-absolute border rounded-pill shadow-sm"
                                             style={{ top: "-18px" }}
                                         >
-                                            <span>June 15, 2013 - 2016</span>
+                                            <span>{ex.date}</span>
                                         </div>
                                         <div className="timeline-content">
                                             <h5 className="timeline-title">
-                                                Master of Science in Computer Science{" "}
-                                                <span className="sub"> - first class</span>
+                                                {ex.title}
+                                                <span className="sub">{ex.sub}</span>
                                             </h5>
-                                            <p>
-                                                Elit exercitation consectetur fugiat sint pariatur aliqua ut est id sit eiusmod.
-                                                Cupidatat mollit quis do reprehenderit minim exercitation et. Tempor nisi ex duis
-                                                cillum exercitation.
-                                            </p>
+                                            <p>{ex.description}</p>
                                         </div>
                                     </div>
                                 ))}
