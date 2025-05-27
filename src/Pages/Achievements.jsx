@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../App.css";
-import CodeTwoToneIcon from '@mui/icons-material/CodeTwoTone';
-import { education, experience } from "../Components/Content";
+import { education, experience, service } from "../Components/Content";
 
 const Achievements = () => {
     const timelineRef = useRef(null);
@@ -35,15 +34,15 @@ const Achievements = () => {
                         <h2>My <span>Resume</span></h2>
                         <span className="d-none d-lg-block bg-title">Achievements</span>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 h-100">
                         <div className="h-100">
                             <h4 className="mb-4 fw-bold text-center mb-5">Education</h4>
-                            <div className="timeline">
+                            <div className="timeline h-100">
                                 {education.map((edu, idx) => (
                                     <div
                                         key={idx}
-                                        className="timeline-item p-3 mb-5 shadow bg-white border position-relative"
-                                        style={{ borderRadius: "15px" }}
+                                        className="timeline-item h-100 p-3 mb-5 shadow bg-white border position-relative"
+                                        style={{ borderRadius: "15px", minHeight: "200px" }}
                                     >
                                         <div
                                             className="timeline-info position-absolute border rounded-pill shadow-sm"
@@ -70,8 +69,8 @@ const Achievements = () => {
                                 {experience.map((ex, idx) => (
                                     <div
                                         key={idx}
-                                        className="timeline-item p-3 mb-5 shadow bg-white border position-relative"
-                                        style={{ borderRadius: "15px" }}
+                                        className="timeline-item h-100 p-3 mb-5 shadow bg-white border position-relative"
+                                        style={{ borderRadius: "15px", minHeight: "200px" }}
                                     >
                                         <div
                                             className="timeline-info position-absolute border rounded-pill shadow-sm"
@@ -93,24 +92,24 @@ const Achievements = () => {
                     </div>
                 </div>
 
-                <div className="row pt-4 service-box mb-3">
-                    {[...Array(4)].map((_, idx) => (
-                        <div className="col-sm-6 col-lg-3 mb-3" key={idx}>
-                            <div className="flipper position-relative py-1">
-                                <div className="main-box">
-                                    <div className="box-front">
+                <div className="row pt-4 service-box mb-3 h-100">
+                    {service.map((service, idx) => (
+                        <div className="col-sm-6 col-lg-3 mb-3" key={idx} style={{ minHeight: "200px" }}>
+                            <div className="flipper position-relative py-1 h-100">
+                                <div className="main-box h-100">
+                                    <div className="box-front h-100">
                                         <div className="content-wrap p-3">
                                             <div className="icon fs-1" style={{ color: '#ff6f61' }}>
-                                                <CodeTwoToneIcon fontSize={"inherit"} />
+                                                <i className={service.icon} ></i>
                                             </div>
-                                            <h3>Development</h3>
-                                            <p>We develop the visual identity of your business.</p>
+                                            <h3>{service.title}</h3>
+                                            <p>{service.description}</p>
                                         </div>
                                     </div>
-                                    <div className="box-back gradient-bg">
+                                    <div className="box-back gradient-bg h-100">
                                         <div className="content-wrap p-3">
-                                            <h3>Development</h3>
-                                            <p>We develop the visual identity of your business.</p>
+                                            <h3>{service.title}</h3>
+                                            <p>{service.description}</p>
                                             <a className="btn">Read more</a>
                                         </div>
                                     </div>

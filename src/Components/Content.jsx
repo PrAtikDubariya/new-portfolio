@@ -8,8 +8,8 @@ export const education = [
     {
         title: "HSC (Higher Secondary Certificate) in Science",
         date: "June 30, 2020 - 2021",
-        description: "Elit exercitation consectetur fugiat sint pariatur aliqua ut est id sit eiusmod. Cupidatat mollit quis do reprehenderit minim exercitation et. Tempor nisi ex duis cillum exercitation.",
-        sub: " - first class"
+        description: "I completed my HSC in Science from Jawahar Navodaya Vidyalaya, Rajkot. This program provided me with a strong background in science and mathematics, which are essential for my engineering studies.",
+        sub: " - 87.2%"
     }
 ];
 
@@ -23,7 +23,30 @@ export const experience = [
     {
         title: "MXI Coders",
         date: "August 1, 2024 - October 31, 2024",
-        description: "MXI Coders is a blockchain-focused company where I gained hands-on experience with blockchain technologies, including ERC token standards and NFTs. I learned about smart contract development, token creation, and the fundamentals of decentralized applications.",
+        description: "MXI Coders is a blockchain-focused company where I gained hands-on experience with blockchain technologies, including ERC token standards and NFTs. I learned about smart contract development, token creation.",
         sub: " - Intern",
+    }
+];
+
+export const service = [
+    {
+        title: "Web Development",
+        description: "Building responsive and dynamic web applications using modern technologies.",
+        icon: "bi bi-laptop"
+    },
+    {
+        title: "Backend Integration",
+        description: "Integrating robust backend systems with frontend applications for seamless data flow.",
+        icon: "bi bi-hdd-network"
+    },
+    {
+        title: "Database Management",
+        description: "Designing and managing databases to ensure data integrity and performance.",
+        icon: "bi bi-database-fill-gear"
+    },
+    {
+        title: "Authentication Systems",
+        description: "Implementing secure authentication systems to protect user data and privacy.",
+        icon: "bi bi-shield-lock-fill"
     }
 ];

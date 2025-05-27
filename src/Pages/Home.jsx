@@ -8,14 +8,14 @@ const Home = ({ scrollToAbout }) => {
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   return (
-    <div className='home pt-4 pt-md-0 w-100 d-flex flex-column justify-content-center position-relative' style={{ paddingBottom:'7rem', minHeight: '100vh' }}>
+    <div className='home pt-5 pt-md-0 w-100 d-flex flex-column justify-content-center position-relative' style={{ paddingBottom:'7rem', minHeight: '100vh' }}>
       <div className="br-text-proffessional">
         PROFFESSIONAL
       </div>
       <div className="br-text-resume">
         RESUME
       </div>
-      <div className='container'>
+      <div className='container' style={{ paddingTop: '5rem' }}>
         <div className='home-content position-relative d-flex flex-column flex-md-row justify-content-md-center'>
           <div className='w-100 d-flex flex-column justify-content-center align-items-start mb-4 mb-md-0'>
             <div className='hero-detail d-flex flex-column justify-content-center align-items-start align-items-sm-center  align-items-md-end'>
