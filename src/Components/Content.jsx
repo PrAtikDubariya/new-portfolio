@@ -1,3 +1,7 @@
+import { loadProjectImages } from "../utils/LoadImages";
+
+const allImages = loadProjectImages();
+
 export const education = [
     {
         title: "Bachelor of Engineering in Computer Engineering",
@@ -48,5 +52,44 @@ export const service = [
         title: "Authentication Systems",
         description: "Implementing secure authentication systems to protect user data and privacy.",
         icon: "bi bi-shield-lock-fill"
+    }
+];
+
+export const projects = [
+    {
+        title: "Portfolio - Website",
+        date: "10, May - 2025",
+        type: "WebPage",
+        technologies: ["React", "Bootstrap CSS", "Node.js", "Express.js"],
+        description: "A personal portfolio website showcasing my skills, projects, and experiences. Built with React and Tailwind CSS.",
+        gitHubLink: "https://github.com/PrAtikDubariya/new-portfolio",
+        images: allImages["PortfolioImages"] || [],
+    },
+    {
+        title: "Pizzashop - Bussiness",
+        date: "1, May - 2025",
+        type: "ERP",
+        technologies: [".NET Core", "Entity Framework", "PostgreSQL Server", "jQuery", "Bootstrap CSS"],
+        description: "A pizza shop management system that allows a bussiness to manage orders, customers, and inventory. Developed using .NET Core and Entity Framework.",
+        gitHubLink: "https://github.com/PrAtikDubariya/pizzashop",
+        images: allImages["PortfolioImages"] || [],
+    },
+    {
+        title: "Concert Booking System - Event management",
+        date: "5, May - 2025",
+        type: "Event Management",
+        technologies: [".NET Core", "Entity Framework", "PostgreSQL Server", "jQuery", "Bootstrap CSS"],
+        description: "An event management system for booking concerts, managing tickets, and handling customer interactions. Built with .NET Core and Entity Framework.",
+        gitHubLink: "",
+        images: allImages["ConcertBookingImages"] || [],
+    },
+    {
+        title: "YelpCamp - Web Application",
+        date: "1, Januaray - 2025",
+        type: "Camp Management",
+        technologies: [".NET Core", "Entity Framework", "PostgreSQL Server", "jQuery", "Bootstrap CSS"],
+        description: "A web application for managing camping sites, allowing users to create, edit, and delete campgrounds. Developed using .NET Core and Entity Framework.",
+        gitHubLink: "https://github.com/PrAtikDubariya/Yelp-Camp",
+        images: allImages["YelpCampImages"] || [],
     }
 ];
